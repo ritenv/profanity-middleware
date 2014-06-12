@@ -10,6 +10,7 @@ A foul-language filter for NodeJS that works seamlessly as a middleware
 ## Usage
 
 **As middleware with Express:**
+
 	var app = express();
 	var profanity = require('profanity-middleware');
 	app.use(profanity.init); //will filter all user input data in all routes
