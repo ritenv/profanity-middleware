@@ -1,0 +1,31 @@
+{
+  "name": "node-profanity-middleware",
+  "version": "0.0.0",
+  "description": "A foul-language filter for NodeJS that works seamlessly as a middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ritenv/node-profanity-middleware.git"
+  },
+  "keywords": [
+    "foul",
+    "profanity",
+    "middleware",
+    "blacklist",
+    "filter",
+    "words"
+  ],
+  "author": "Riten Vagadiya <ritensv@gmail.com> (http://ritenv.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ritenv/node-profanity-middleware/issues"
+  },
+  "homepage": "https://github.com/ritenv/node-profanity-middleware",
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.20.1"
+  }
+}
