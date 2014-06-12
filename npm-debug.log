@@ -1,0 +1,124 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/ritenvagadiya/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/var/folders/dt/hp_n2gks79n2pjw4prv68k780000gn/T/npm-92583-c46f3W2m/1402595295588-0.6739200132433325/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /var/folders/dt/hp_n2gks79n2pjw4prv68k780000gn/T/npm-92583-c46f3W2m/1402595295588-0.6739200132433325/tmp.tgz
+12 verbose folder .
+13 info prepublish profanity-middleware@0.1.1
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/ritenvagadiya/.npm/1f1177db-tar.lock
+16 silly lockFile 6ad42ada-95588-0-6739200132433325-tmp-tgz tar:///var/folders/dt/hp_n2gks79n2pjw4prv68k780000gn/T/npm-92583-c46f3W2m/1402595295588-0.6739200132433325/tmp.tgz
+17 verbose lock tar:///var/folders/dt/hp_n2gks79n2pjw4prv68k780000gn/T/npm-92583-c46f3W2m/1402595295588-0.6739200132433325/tmp.tgz /Users/ritenvagadiya/.npm/6ad42ada-95588-0-6739200132433325-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 6ad42ada-95588-0-6739200132433325-tmp-tgz tar:///var/folders/dt/hp_n2gks79n2pjw4prv68k780000gn/T/npm-92583-c46f3W2m/1402595295588-0.6739200132433325/tmp.tgz
+21 silly lockFile 6ad42ada-95588-0-6739200132433325-tmp-tgz tar:///var/folders/dt/hp_n2gks79n2pjw4prv68k780000gn/T/npm-92583-c46f3W2m/1402595295588-0.6739200132433325/tmp.tgz
+22 verbose tar unpack /var/folders/dt/hp_n2gks79n2pjw4prv68k780000gn/T/npm-92583-c46f3W2m/1402595295588-0.6739200132433325/tmp.tgz
+23 silly lockFile a0e3ad2d-ofanity-middleware-0-1-1-package tar:///Users/ritenvagadiya/.npm/profanity-middleware/0.1.1/package
+24 verbose lock tar:///Users/ritenvagadiya/.npm/profanity-middleware/0.1.1/package /Users/ritenvagadiya/.npm/a0e3ad2d-ofanity-middleware-0-1-1-package.lock
+25 silly lockFile 6ad42ada-95588-0-6739200132433325-tmp-tgz tar:///var/folders/dt/hp_n2gks79n2pjw4prv68k780000gn/T/npm-92583-c46f3W2m/1402595295588-0.6739200132433325/tmp.tgz
+26 verbose lock tar:///var/folders/dt/hp_n2gks79n2pjw4prv68k780000gn/T/npm-92583-c46f3W2m/1402595295588-0.6739200132433325/tmp.tgz /Users/ritenvagadiya/.npm/6ad42ada-95588-0-6739200132433325-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry .npmignore
+30 silly gunzTarPerm extractEntry README.md
+31 silly gunzTarPerm extractEntry LICENSE
+32 silly gunzTarPerm extractEntry index.js
+33 silly gunzTarPerm extractEntry Makefile
+34 silly gunzTarPerm extractEntry test/index.js
+35 silly gunzTarPerm extractEntry words.json
+36 silly lockFile a0e3ad2d-ofanity-middleware-0-1-1-package tar:///Users/ritenvagadiya/.npm/profanity-middleware/0.1.1/package
+37 silly lockFile a0e3ad2d-ofanity-middleware-0-1-1-package tar:///Users/ritenvagadiya/.npm/profanity-middleware/0.1.1/package
+38 silly lockFile 6ad42ada-95588-0-6739200132433325-tmp-tgz tar:///var/folders/dt/hp_n2gks79n2pjw4prv68k780000gn/T/npm-92583-c46f3W2m/1402595295588-0.6739200132433325/tmp.tgz
+39 silly lockFile 6ad42ada-95588-0-6739200132433325-tmp-tgz tar:///var/folders/dt/hp_n2gks79n2pjw4prv68k780000gn/T/npm-92583-c46f3W2m/1402595295588-0.6739200132433325/tmp.tgz
+40 silly lockFile 3a52ce78- .
+41 silly lockFile 3a52ce78- .
+42 silly publish { name: 'profanity-middleware',
+42 silly publish   version: '0.1.1',
+42 silly publish   description: 'A foul-language filter for NodeJS that works seamlessly as a middleware',
+42 silly publish   main: 'index.js',
+42 silly publish   scripts: { test: 'make test' },
+42 silly publish   repository:
+42 silly publish    { type: 'git',
+42 silly publish      url: 'https://github.com/ritenv/node-profanity-middleware.git' },
+42 silly publish   keywords:
+42 silly publish    [ 'foul',
+42 silly publish      'profanity',
+42 silly publish      'middleware',
+42 silly publish      'blacklist',
+42 silly publish      'filter',
+42 silly publish      'words' ],
+42 silly publish   author:
+42 silly publish    { name: 'Riten Vagadiya',
+42 silly publish      email: 'ritensv@gmail.com',
+42 silly publish      url: 'http://ritenv.com/' },
+42 silly publish   license: 'MIT',
+42 silly publish   bugs: { url: 'https://github.com/ritenv/node-profanity-middleware/issues' },
+42 silly publish   homepage: 'https://github.com/ritenv/node-profanity-middleware',
+42 silly publish   devDependencies: { chai: '^1.9.1', mocha: '^1.20.1' },
+42 silly publish   readme: 'profanity-middleware\n=========================\n\nA foul-language filter for NodeJS that works seamlessly as a middleware\n\n## Installation\n\n  npm install profanity-middleware --save\n\n## Usage\n\n**As middleware with Express for all routes:**\n\n    var app = express();\n\tvar profanity = require(\'profanity-middleware\');\n\t...\n\t//try to keep this the last app.use (optional)\n\tapp.use(profanity.init); //will filter all user input data in all routes\n\n**As middleware with Express for specific routes:**\n\n\tvar profanity = require(\'profanity-middleware\');\n\t...\n\tapp.post(\'/createPost/\', *profanity.init*, function(req,res) {\n\t\t...\n\t})\n\n**As function:**\n\n    var profanity = require(\'profanity-middleware\'),\n        filter = profanity.filter;\n\n    var html = \'Hello Foul World\',\n        filtered = filter(html, {blacklist: [\'foul\']});\n    //parameters: mask - String, blacklist - Array\n    console.log(\'html\', html, \'filtered\', filtered);\n\n## Tests\n\n  npm test\n\n  - Check for replacing case-sensitive words \n  - Check for not replacing in-string words that could be part of other words \n  - Check for recursively filtering strings inside objects \n  - Check for custom words and custom mask \n\n## Contributing\n\nIn lieu of a formal styleguide, take care to maintain the existing coding style.\nAdd unit tests for any new or changed functionality. Lint and test your code.\n\n## Release History\n\n* 0.1.2 Initial release',
+42 silly publish   readmeFilename: 'README.md',
+42 silly publish   _id: 'profanity-middleware@0.1.1',
+42 silly publish   _shasum: '91ceaa428f60d0ce9f919a1f91883d1018bb5a46',
+42 silly publish   _from: '.' }
+43 verbose url raw profanity-middleware
+44 verbose url resolving [ 'https://registry.npmjs.org/', './profanity-middleware' ]
+45 verbose url resolved https://registry.npmjs.org/profanity-middleware
+46 info trying registry request attempt 1 at 21:48:15
+47 http PUT https://registry.npmjs.org/profanity-middleware
+48 http 403 https://registry.npmjs.org/profanity-middleware
+49 verbose headers { date: 'Thu, 12 Jun 2014 17:48:18 GMT',
+49 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+49 verbose headers   'content-type': 'application/json',
+49 verbose headers   'cache-control': 'max-age=1',
+49 verbose headers   'content-length': '4268',
+49 verbose headers   'accept-ranges': 'bytes',
+49 verbose headers   via: '1.1 varnish',
+49 verbose headers   'x-served-by': 'cache-sn86-SIN',
+49 verbose headers   'x-cache': 'MISS',
+49 verbose headers   'x-cache-hits': '0',
+49 verbose headers   'x-timer': 'S1402595297.315855,VS0,VE786',
+49 verbose headers   'keep-alive': 'timeout=10, max=50',
+49 verbose headers   connection: 'Keep-Alive' }
+50 error publish Failed PUT 403
+51 error Error: forbidden cannot modify pre-existing version: 0.1.1
+51 error old={"name":"profanity-middleware","version":"0.1.1","description":"A foul-language filter for NodeJS that works seamlessly as a middleware","main":"index.js","scripts":{"test":"make test"},"repository":{"type":"git","url":"https://github.com/ritenv/node-profanity-middleware.git"},"keywords":["foul","profanity","middleware","blacklist","filter","words"],"author":{"name":"Riten Vagadiya","email":"ritensv@gmail.com","url":"http://ritenv.com/"},"license":"MIT","bugs":{"url":"https://github.com/ritenv/node-profanity-middleware/issues"},"homepage":"https://github.com/ritenv/node-profanity-middleware","devDependencies":{"chai":"^1.9.1","mocha":"^1.20.1"},"_id":"profanity-middleware@0.1.1","_shasum":"91dc45ad3b0d2599cc4a28cf17de7d1eb3eb6265","_from":".","_npmVersion":"1.4.9","_npmUser":{"name":"ritenv","email":"ritensv@gmail.com"},"maintainers":[{"name":"ritenv","email":"ritensv@gmail.com"}],"dist":{"shasum":"91dc45ad3b0d2599cc4a28cf17de7d1eb3eb6265","tarball":"http://registry.npmjs.org/profanity-middleware/-/profanity-middleware-0.1.1.tgz"}}
+51 error new={"name":"profanity-middleware","version":"0.1.1","description":"A foul-language filter for NodeJS that works seamlessly as a middleware","main":"index.js","scripts":{"test":"make test"},"repository":{"type":"git","url":"https://github.com/ritenv/node-profanity-middleware.git"},"keywords":["foul","profanity","middleware","blacklist","filter","words"],"author":{"name":"Riten Vagadiya","email":"ritensv@gmail.com","url":"http://ritenv.com/"},"license":"MIT","bugs":{"url":"https://github.com/ritenv/node-profanity-middleware/issues"},"homepage":"https://github.com/ritenv/node-profanity-middleware","devDependencies":{"chai":"^1.9.1","mocha":"^1.20.1"},"readme":"profanity-middleware\u000a=========================\u000a\u000aA foul-language filter for NodeJS that works seamlessly as a middleware\u000a\u000a## Installation\u000a\u000a  npm install profanity-middleware --save\u000a\u000a## Usage\u000a\u000a**As middleware with Express for all routes:**\u000a\u000a    var app = express();\u000a\u0009var profanity = require('profanity-middleware');\u000a\u0009...\u000a\u0009//try to keep this the last app.use (optional)\u000a\u0009app.use(profanity.init); //will filter all user input data in all routes\u000a\u000a**As middleware with Express for specific routes:**\u000a\u000a\u0009var profanity = require('profanity-middleware');\u000a\u0009...\u000a\u0009app.post('/createPost/', *profanity.init*, function(req,res) {\u000a\u0009\u0009...\u000a\u0009})\u000a\u000a**As function:**\u000a\u000a    var profanity = require('profanity-middleware'),\u000a        filter = profanity.filter;\u000a\u000a    var html = 'Hello Foul World',\u000a        filtered = filter(html, {blacklist: ['foul']});\u000a    //parameters: mask - String, blacklist - Array\u000a    console.log('html', html, 'filtered', filtered);\u000a\u000a## Tests\u000a\u000a  npm test\u000a\u000a  - Check for replacing case-sensitive words \u000a  - Check for not replacing in-string words that could be part of other words \u000a  - Check for recursively filtering strings inside objects \u000a  - Check for custom words and custom mask \u000a\u000a## Contributing\u000a\u000aIn lieu of a formal styleguide, take care to maintain the existing coding style.\u000aAdd unit tests for any new or changed functionality. Lint and test your code.\u000a\u000a## Release History\u000a\u000a* 0.1.2 Initial release","readmeFilename":"README.md","_id":"profanity-middleware@0.1.1","_shasum":"91ceaa428f60d0ce9f919a1f91883d1018bb5a46","_from":".","_npmVersion":"1.4.9","_npmUser":{"name":"ritenv","email":"ritensv@gmail.com"},"maintainers":[{"name":"ritenv","email":"ritensv@gmail.com"}],"dist":{"shasum":"91ceaa428f60d0ce9f919a1f91883d1018bb5a46","tarball":"http://registry.npmjs.org/profanity-middleware/-/profanity-middleware-0.1.1.tgz"}}: profanity-middleware
+51 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:273:14)
+51 error     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:211:65)
+51 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:123:22)
+51 error     at Request.EventEmitter.emit (events.js:98:17)
+51 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:893:14)
+51 error     at Request.EventEmitter.emit (events.js:117:20)
+51 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:844:12)
+51 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+51 error     at _stream_readable.js:919:16
+51 error     at process._tickCallback (node.js:419:13)
+52 error If you need help, you may report this *entire* log,
+52 error including the npm and node versions, at:
+52 error     <http://github.com/npm/npm/issues>
+53 error System Darwin 13.0.0
+54 error command "node" "/usr/local/bin/npm" "publish"
+55 error cwd /Applications/MAMP/htdocs/itr/profanity
+56 error node -v v0.10.28
+57 error npm -v 1.4.9
+58 verbose exit [ 1, true ]

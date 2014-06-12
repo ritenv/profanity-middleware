@@ -21,7 +21,7 @@ A foul-language filter for NodeJS that works seamlessly as a middleware
 
 	var profanity = require('profanity-middleware');
 	...
-	app.post('/createPost/', *profanity.init*, function(req,res) {
+	app.post('/createPost/', profanity.init, function(req,res) {
 		...
 	})
 
