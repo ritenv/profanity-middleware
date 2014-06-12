@@ -9,17 +9,17 @@ A foul-language filter for NodeJS that works seamlessly as a middleware
 
 ## Usage
 
-*As middleware with Express:*
+**As middleware with Express:**
 	var app = express();
 	var profanity = require('profanity-middleware');
 	app.use(profanity.init); //will filter all user input data in all routes
 
-*As function:*
+**As function:**
 
   var profanity = require('profanity-middleware')
       filter = profanity.filter;
 
-  var html = '<h1>Hello Foul World</h1>',
+  var html = 'Hello Foul World',
       filtered = filter(html, {blacklist: ['foul']});
 
   console.log('html', html, 'filtered', filtered);
