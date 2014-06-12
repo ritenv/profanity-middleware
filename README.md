@@ -27,7 +27,7 @@ A foul-language filter for NodeJS that works seamlessly as a middleware
 
 **As function:**
 
-  var profanity = require('profanity-middleware')
+  var profanity = require('profanity-middleware'),
       filter = profanity.filter;
 
   var html = 'Hello Foul World',
