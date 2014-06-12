@@ -1,4 +1,4 @@
-node-profanity-middleware
+profanity-middleware
 =========================
 
 A foul-language filter for NodeJS that works seamlessly as a middleware
@@ -11,7 +11,7 @@ A foul-language filter for NodeJS that works seamlessly as a middleware
 
 **As middleware with Express for all routes:**
 
-	var app = express();
+    var app = express();
 	var profanity = require('profanity-middleware');
 	...
 	//try to keep this the last app.use (optional)
@@ -27,17 +27,22 @@ A foul-language filter for NodeJS that works seamlessly as a middleware
 
 **As function:**
 
-  var profanity = require('profanity-middleware'),
-      filter = profanity.filter;
+    var profanity = require('profanity-middleware'),
+        filter = profanity.filter;
 
-  var html = 'Hello Foul World',
-      filtered = filter(html, {blacklist: ['foul']});
-
-  console.log('html', html, 'filtered', filtered);
+    var html = 'Hello Foul World',
+        filtered = filter(html, {blacklist: ['foul']});
+    //parameters: mask - String, blacklist - Array
+    console.log('html', html, 'filtered', filtered);
 
 ## Tests
 
   npm test
+
+  - Check for replacing case-sensitive words 
+  - Check for not replacing in-string words that could be part of other words 
+  - Check for recursively filtering strings inside objects 
+  - Check for custom words and custom mask 
 
 ## Contributing
 
@@ -46,4 +51,4 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Release History
 
-* 0.1.0 Initial release
+* 0.1.2 Initial release
