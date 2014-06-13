@@ -1,11 +1,15 @@
 profanity-middleware
 =========================
 
-A foul-language filter for NodeJS that works seamlessly as a middleware
+A foul-language filter for NodeJS that works seamlessly as a middleware.
+
+When used as middleware, all data received for the requests are purified automatically. It inserts profanity filters into all routes (or specific ones) to implicitly take care of purification, so you never have to deal with it.
+
+This plugin is built on the assumption that profanity filters need to be implemented implicitly, so you do not have to manually call functions for sanitizing each string (but you can do that too, with this plugin).
 
 ## Installation
 
-  npm install profanity-middleware --save
+  npm install profanity-middleware
 
 ## Basic Usage
 
@@ -24,6 +28,7 @@ A foul-language filter for NodeJS that works seamlessly as a middleware
 	app.post('/createPost/', profanity.init, function(req,res) {
 		...
 	});
+
 
 **As function:**
 
