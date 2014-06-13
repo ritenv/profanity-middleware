@@ -17,11 +17,12 @@ describe('#filter', function() {
 	});
 
 
-	var str3 = { str: 'Fucking shit happens many a times to him because he is such an ass' };
-	var filteredStr3 = { str: 'F*****g s**t happens many a times to him because he is such an a*s'};
+	var str3 = { wrapper: { str: 'Fucking shit happens many a times to him because he is such an ass' } };
+	var filteredStr3 = { wrapper: { str: 'F*****g s**t happens many a times to him because he is such an a*s'} };
 	it('Check for recursively filtering strings inside objects', function() {
-		filter(str3).str.should.equal(filteredStr3.str);
+		filter(str3).wrapper.str.should.equal(filteredStr3.wrapper.str);
 	});
+
 
 	var str4 = 'Replacing additional words with custom mask character!';
 	var filteredStr4 = 'Replacing additional words with c$$$$m mask character!';

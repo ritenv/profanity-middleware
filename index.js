@@ -52,7 +52,7 @@ module.exports = new (function() {
 		if (typeof obj === "object") {
 			for (var key in obj) {
 				if (typeof obj[key] === "object")
-					obj[key] = recurse(obj[key]);
+					obj[key] = filter(obj[key], options);
 				else if (typeof obj[key] !== "function")
 					obj[key] = doFilter(obj[key]);
 
@@ -61,7 +61,13 @@ module.exports = new (function() {
 			obj = doFilter(obj);
 		return obj;
 	}
-
+	var setOptions = function(options) {
+		if (options != undefined) {
+			defaultConfig.mask = (options.mask != undefined ? options.mask : defaultConfig.mask);
+			defaultConfig.blacklist = (options.blacklist != undefined ? options.blacklist : defaultConfig.blacklist);
+		}
+	}
 	this.init = init;
 	this.filter = filter;
+	this.setOptions = setOptions;
 })();

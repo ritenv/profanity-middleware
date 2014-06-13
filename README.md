@@ -7,9 +7,9 @@ A foul-language filter for NodeJS that works seamlessly as a middleware
 
   npm install profanity-middleware --save
 
-## Usage
+## Basic Usage
 
-**As middleware with Express for all routes:**
+**As middleware with Express for all routes (app middleware):**
 
     var app = express();
 	var profanity = require('profanity-middleware');
@@ -17,13 +17,13 @@ A foul-language filter for NodeJS that works seamlessly as a middleware
 	//try to keep this the last app.use (optional)
 	app.use(profanity.init); //will filter all user input data in all routes
 
-**As middleware with Express for specific routes:**
+**As middleware with Express for specific routes (route middleware):**
 
 	var profanity = require('profanity-middleware');
 	...
 	app.post('/createPost/', profanity.init, function(req,res) {
 		...
-	})
+	});
 
 **As function:**
 
@@ -31,9 +31,38 @@ A foul-language filter for NodeJS that works seamlessly as a middleware
         filter = profanity.filter;
 
     var html = 'Hello Foul World',
-        filtered = filter(html, {blacklist: ['foul']});
-    //parameters: mask - String, blacklist - Array
-    console.log('html', html, 'filtered', filtered);
+        filtered = filter(html, {blacklist: ['foul']}); //defining foul as a slang word
+    console.log('filtered');
+    //Hello f**l world
+
+## Configuration
+
+This plugin supports 2 basic options that can be configured:
+
+	{
+		mask: '$', //default '*'
+		blacklist: ['foul', 'slang'] //default []
+	}
+
+`mask` (optional) is used to filter foul words with a character of your choice; default is asterisk (*)
+`blacklist` (optional) is used to define words that you wish to filter in addition to the default dictionary; default is an empty array;
+
+**As middleware**
+
+As middleware, the options are specified just after 'require':
+
+	var profanity = require('profanity-middleware');
+	profanity.setOptions({
+		mask: '$', 
+		blacklist: ['foul', 'slang']
+	});
+	app.use(profanity.init); //then use it as app middleware or route middleware
+	
+**As function**
+
+As function, the options are specified when calling the function
+
+	filter(html, {blacklist: ['foul', 'slang']});
 
 ## Tests
 
