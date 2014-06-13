@@ -45,6 +45,7 @@ This plugin supports 2 basic options that can be configured:
 	}
 
 `mask` (optional) is used to filter foul words with a character of your choice; default is asterisk (*)
+
 `blacklist` (optional) is used to define words that you wish to filter in addition to the default dictionary; default is an empty array;
 
 **As middleware**
