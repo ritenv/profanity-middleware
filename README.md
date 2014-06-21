@@ -88,4 +88,5 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Release History
 
-* 0.1.3 Initial release
+* 0.1.4 GHOST Enhancement
+* 0.1.3 Line breaks Enhancement
