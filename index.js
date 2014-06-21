@@ -23,16 +23,29 @@ module.exports = new (function() {
 	}
 	var doFilter = function(paragraph) {
 		if (typeof paragraph === 'string') {
-			var tokens = paragraph.split(' ');
-			for (var i = 0; i < tokens.length; i++ ) {
-				tokens[i] = wordFilter(tokens[i]);
+			var initTokens = paragraph.split('\n');
+			var initTokensLength = initTokens.length;
+			for (var j = 0; j < initTokensLength; j++ ) {
+				var line = initTokens[j];
+
+				var tokens = line.split(' ');
+				var tokensLength = tokens.length;
+				for (var i = 0; i < tokensLength; i++ ) {
+					tokens[i] = wordFilter(tokens[i]);
+				}
+				line = tokens.join(' ');
+
+				initTokens[j] = line;
 			}
-			paragraph = tokens.join(' ');
+			paragraph = initTokens.join('\n');
+			
+			return paragraph;
+		} else {
 			return paragraph;
 		}
 	}
 	var init = function(req, res, next) {
-
+		
 		//parse req.body
 		for (var i in req.body) {
 			var item = req.body[i];
