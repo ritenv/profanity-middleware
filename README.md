@@ -4,6 +4,7 @@ profanity-middleware
 A foul-language filter for NodeJS that works seamlessly as a middleware.
 
 [![Build Status](https://travis-ci.org/ritenv/profanity-middleware.svg?branch=master)](https://travis-ci.org/ritenv/profanity-middleware)
+[![NPM Module](https://badge.fury.io/js/profanity-middleware.svg)](http://badge.fury.io/js/profanity-middleware)
 
 When used as middleware, all data received for the requests are purified automatically. It inserts profanity filters into all routes (or specific ones) to implicitly take care of purification, so you never have to deal with it.
 
