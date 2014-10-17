@@ -1,6 +1,6 @@
 {
   "name": "profanity-middleware",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A foul-language filter for NodeJS that works seamlessly as a middleware",
   "main": "index.js",
   "scripts": {
@@ -13,10 +13,10 @@
   "keywords": [
     "foul",
     "profanity",
-    "middleware",
+    "bad words",
     "blacklist",
-    "filter",
-    "words"
+    "curse",
+    "badwords"
   ],
   "author": "Riten Vagadiya <ritensv@gmail.com> (http://ritenv.com/)",
   "license": "MIT",

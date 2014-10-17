@@ -29,6 +29,14 @@ describe('#filter', function() {
 	it('Check for custom words and custom mask', function() {
 		filter(str4, {mask: '$', blacklist: ['custom']}).should.equal(filteredStr4);
 	});
+
+	var str5 = 'Fucking shit happens many a times to him because he is such an ass';
+	var filteredStr5 = 'F*****g s**t happens many a times to him because he is such an a*s';
+	it('Checking count of profane words', function() {
+		var resStub = {};
+		filter(str, {mask: '*', blacklist: ['custom']}, resStub).should.equal(filteredStr);
+		resStub.profaneWordsCount.should.equal(3);
+	});
 	/*
 	it('converts shit shit to s*** s***', function() {
 		filter(' shit shit ').should.equal(' s*** s*** ');
