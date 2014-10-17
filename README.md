@@ -93,6 +93,7 @@ The count will be returned in the next line as: `resStub.profaneWordsCount`
   - Check for not replacing in-string words that could be part of other words 
   - Check for recursively filtering strings inside objects 
   - Check for custom words and custom mask 
+  - Check for count of profane words
 
 ## Contributing
 
