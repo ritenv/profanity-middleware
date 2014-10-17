@@ -72,6 +72,19 @@ As function, the options are specified when calling the function
 
 	filter(html, {blacklist: ['foul', 'slang']});
 
+## Newly Added
+
+When used as middleware, the `res` object of the route will be assigned a `profaneWordsCount` which is the count of foul words encountered in that commit.
+
+You can try: `console.log(res.profaneWordsCount)` in any of your route, and can calculate a rating of foulness based on this.
+
+When used as a direct filter function, you can pass in a parameter which will be changed by reference, as below:
+`filter(str, {mask: '*', blacklist: ['custom']}, resStub)`
+Or:
+`filter(str, {}, resStub) //for default options`
+
+The count will be returned in the next line as: `resStub.profaneWordsCount`
+
 ## Tests
 
   npm test
