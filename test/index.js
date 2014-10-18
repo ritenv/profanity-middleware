@@ -1,6 +1,7 @@
 var should = require('chai').should(),
 	profanity = require('../index'),
-	filter = profanity.filter;
+	filter = profanity.filter,
+	rating = profanity.rating;
 
 describe('#filter', function() {
 	var str = 'Fucking shit happens many a times to him because he is such an ass';
@@ -36,6 +37,15 @@ describe('#filter', function() {
 		var resStub = {};
 		filter(str, {mask: '*', blacklist: ['custom']}, resStub).should.equal(filteredStr);
 		resStub.profaneWordsCount.should.equal(3);
+	});
+
+	var str6 = 'Fucking shit happens many a times to him because he is such an ass';
+	var filteredStr6 = 'F*****g s**t happens many a times to him because he is such an a*s';
+	it('Checking rating of profane words', function() {
+		var resStub = {};
+		filter(str, {mask: '*', blacklist: ['custom']}, resStub).should.equal(filteredStr);
+		resStub.profaneWordsCount.should.equal(3);
+		rating(resStub.profaneWordsCount).should.equal(6); //3 bad words meaning it is 6% foul
 	});
 	/*
 	it('converts shit shit to s*** s***', function() {

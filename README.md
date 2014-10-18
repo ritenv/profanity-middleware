@@ -75,6 +75,8 @@ As function, the options are specified when calling the function
 
 ## Newly Added
 
+**Profane Words Count**
+
 When used as middleware, the `res` object of the route will be assigned a `profaneWordsCount` which is the count of foul words encountered in that commit.
 
 You can try: `console.log(res.profaneWordsCount)` in any of your route, and can calculate a rating of foulness based on this.
@@ -85,6 +87,19 @@ Or:
 `filter(str, {}, resStub) //for default options`
 
 The count will be returned in the next line as: `resStub.profaneWordsCount`
+
+**Profane Words Rating**
+
+To count the rating, simply call the rating function as below:
+
+	var profanity = require('profanity-middleware');
+	var rating = profanity.rating;
+	var filter = profanity.filter;
+	var resStub = {}; //if you are getting data from the request object (as middleware), just use the 'res' object
+	var badword = filter('enterBadWordHere', {blacklist: ['Bad']}, resStub);
+	var computedRating = rating(resStub.profaneWordsCount);
+	console.log("Rating of profanity is ", computedRating);
+
 
 ## Tests
 
@@ -103,6 +118,7 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Release History
 
+* 0.2.1 Profane words rating calculator function added
 * 0.2.0 Profane word counts added
 * 0.1.4 GHOST Enhancement
 * 0.1.3 Line breaks Enhancement

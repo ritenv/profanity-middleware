@@ -85,6 +85,12 @@ module.exports = new (function() {
 			defaultConfig.blacklist = (options.blacklist != undefined ? options.blacklist : defaultConfig.blacklist);
 		}
 	}
+	var rating = function(profaneWordsCount) {
+		//50 bad words means 100% rating
+		var calculatedRate = (profaneWordsCount / 50) * 100;
+		return calculatedRate;
+	}
+	this.rating = rating;
 	this.init = init;
 	this.filter = filter;
 	this.setOptions = setOptions;
