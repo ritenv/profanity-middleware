@@ -110,6 +110,7 @@ To count the rating, simply call the rating function as below:
   - Check for recursively filtering strings inside objects 
   - Check for custom words and custom mask 
   - Check for count of profane words
+  - Check rating of profane words
 
 ## Contributing
 
