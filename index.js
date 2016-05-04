@@ -2,6 +2,7 @@ module.exports = new (function() {
 	var words = require('./words.json');
 	var defaultConfig = {
 		mask: '*',
+		fullyMasked: false,
 		blacklist: []
 	}
 	var wordFilter = function(str, res) {
@@ -15,7 +16,9 @@ module.exports = new (function() {
 			res.profaneWordsCount++;
 			var word = str;
 			var wordLen = word.length;
-			str = word.substr(0,1) + Array(wordLen-1).join(defaultConfig.mask) + word.substr(wordLen-1,1);
+			str = defaultConfig.fullyMasked ? 
+				Array(wordLen+1).join(defaultConfig.mask) :
+				word.substr(0,1) + Array(wordLen-1).join(defaultConfig.mask) + word.substr(wordLen-1,1);
 		} else {
 			str = originalStr;
 		}
@@ -64,6 +67,7 @@ module.exports = new (function() {
 			res.profaneWordsCount = 0;
 		if (options != undefined) {
 			defaultConfig.mask = (options.mask != undefined ? options.mask : defaultConfig.mask);
+			defaultConfig.fullyMasked = (options.fullyMasked != undefined ? options.fullyMasked : defaultConfig.fullyMasked);
 			defaultConfig.blacklist = (options.blacklist != undefined ? options.blacklist : defaultConfig.blacklist);
 		}
 
@@ -82,6 +86,7 @@ module.exports = new (function() {
 	var setOptions = function(options) {
 		if (options != undefined) {
 			defaultConfig.mask = (options.mask != undefined ? options.mask : defaultConfig.mask);
+			defaultConfig.fullyMasked = (options.fullyMasked != undefined ? options.fullyMasked : defaultConfig.fullyMasked);
 			defaultConfig.blacklist = (options.blacklist != undefined ? options.blacklist : defaultConfig.blacklist);
 		}
 	}
