@@ -47,6 +47,12 @@ describe('#filter', function() {
 		resStub.profaneWordsCount.should.equal(3);
 		rating(resStub.profaneWordsCount).should.equal(6); //3 bad words meaning it is 6% foul
 	});
+
+	var str7 = 'Fucking shit happens many a times to him because he is such an ass';
+	var filteredStr7 = '******* **** happens many a times to him because he is such an ***';
+	it('Check for fully masking words as alternate option', function() {
+		filter(str7, {fullyMasked: true}).should.equal(filteredStr7);
+	});
 	/*
 	it('converts shit shit to s*** s***', function() {
 		filter(' shit shit ').should.equal(' s*** s*** ');

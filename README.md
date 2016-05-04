@@ -45,14 +45,17 @@ This plugin is built on the assumption that profanity filters need to be impleme
 
 ## Configuration
 
-This plugin supports 2 basic options that can be configured:
+This plugin supports 3 basic options that can be configured:
 
 	{
 		mask: '$', //default '*'
+		fullyMasked: true, // default false
 		blacklist: ['foul', 'slang'] //default []
 	}
 
 `mask` (optional) is used to filter foul words with a character of your choice; default is asterisk (*)
+
+`fullyMasked` (optional) is used to replace all letters in profance words with the mask character, instead of just the inner letters
 
 `blacklist` (optional) is used to define words that you wish to filter in addition to the default dictionary; default is an empty array;
 
@@ -100,6 +103,13 @@ To count the rating, simply call the rating function as below:
 	var computedRating = rating(resStub.profaneWordsCount);
 	console.log("Rating of profanity is ", computedRating);
 
+**Fully Masking Profane Words**
+
+By default, the middleware will leave the first and last letter of a profane word unmasked. To mask the full word, including first and last letters, add the `fullyMasked` option to the filter object and set it to `true`, like below:
+
+    ...
+    filter('enterBadWordHere', {fullyMasked: true}, resStub);
+    ...
 
 ## Tests
 
@@ -111,6 +121,7 @@ To count the rating, simply call the rating function as below:
   - Check for custom words and custom mask 
   - Check for count of profane words
   - Check rating of profane words
+  - Check for fully masking words as alternate option
 
 ## Contributing
 
@@ -119,6 +130,7 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Release History
 
+* 0.3.0 Added backwards-compatible option to fully mask profane words
 * 0.2.1 Profane words rating calculator function added
 * 0.2.0 Profane word counts added
 * 0.1.4 GHOST Enhancement
