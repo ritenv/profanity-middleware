@@ -55,7 +55,7 @@ This plugin supports 3 basic options that can be configured:
 
 `mask` (optional) is used to filter foul words with a character of your choice; default is asterisk (*)
 
-`fullyMasked` (optional) is used to replace all letters in profance words with the mask character, instead of just the inner letters
+`fullyMasked` (optional) is used to replace all letters in profane words with the mask character, instead of just the inner letters
 
 `blacklist` (optional) is used to define words that you wish to filter in addition to the default dictionary; default is an empty array;
 

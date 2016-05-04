@@ -1,6 +1,6 @@
 {
   "name": "profanity-middleware",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "A foul-language filter for NodeJS that works seamlessly as a middleware",
   "main": "index.js",
   "scripts": {
